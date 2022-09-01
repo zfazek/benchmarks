@@ -1,0 +1,7 @@
+*.class
+*.exe
+main
+Cargo.lock
+target/
+.vscode/
+
