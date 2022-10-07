@@ -1,7 +1,10 @@
+.vscode/
 *.class
 *.exe
-main
-Cargo.lock
 target/
-.vscode/
+Cargo.lock
+main
+main1
+main2
 
+callgrind.*
