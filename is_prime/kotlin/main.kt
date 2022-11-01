@@ -1,27 +1,17 @@
 import kotlin.math.sqrt
 
+
 fun isPrime(n: Int): Boolean {
     if (n < 2) {
         return false
     }
-    for (i in 2..sqrt(n.toDouble()).toInt()) {
-        if (n % i == 0) {
-            return false
-        }
-    }
-    return true
+    return (2..sqrt(n.toDouble()).toInt()).all { i -> n % i != 0 }
 }
 
 fun main() {
     val start = System.currentTimeMillis()
-    var sum: Long = 0
-    println("Hello")
-    for (n in 1..1_000_000) {
-        if (isPrime(n)) {
-            sum += n
-        }
-    }
+    val s: Long = (1L..1_000_000).filter { i -> isPrime(i.toInt()) }.sum()
     val end = System.currentTimeMillis()
-    println(sum)
+    println(s)
     println(String.format("time (ms): %s", end - start))
 }
