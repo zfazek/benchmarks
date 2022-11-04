@@ -13,7 +13,7 @@ func main() {
     start := time.Now()
     var checksum int64 = 0
     for i := 0; i < 1000000; i++ {
-        data := new(Data)
+        data := Data{}
         data.SIZE = 1024
         for j := 0; j < data.SIZE; j++ {
            data.arr = append(data.arr, j)

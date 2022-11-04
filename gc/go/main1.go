@@ -15,7 +15,7 @@ func main() {
 	start := time.Now()
 	var checksum int64 = 0
 	for i := 0; i < 1000000; i++ {
-		data := new(Data)
+		data := Data{}
 		arr := make([]int, 1024)
 		data.arr = arr
 		data.SIZE = 1024
